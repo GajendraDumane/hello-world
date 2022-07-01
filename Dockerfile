@@ -2,7 +2,9 @@ FROM tomcat:8.5.35-jre10
 
 WORKDIR /var/lib/jenkins/workspace/dockerpro/webapp/target/
 
-ADD webapp.war /usr/local/tomcat/webapps/webapp.war
+ARG webapp.war=/var/lib/jenkins/workspace/dockerpro/webapp/target/webapp.war
+
+COPY ${webapp.war} /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
