@@ -1,6 +1,6 @@
 FROM tomcat:8.5.35-jre10
 
-COPY . webapp.war /usr/local/tomcat/webapps/
+ADD . webapp.war /usr/local/tomcat/webapps/
 
 EXPOSE 8080
 
