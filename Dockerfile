@@ -1,5 +1,7 @@
 FROM tomcat:8.5.35-jre10
 
+RUN ls -lrth /var/lib/jenkins/workspace/dockerpro/webapp/target/ | grep "webapp.war"
+
 WORKDIR /var/lib/jenkins/workspace/dockerpro/webapp/target/
 
 ARG webapp.war=/var/lib/jenkins/workspace/dockerpro/webapp/target/webapp.war
