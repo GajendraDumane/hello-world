@@ -2,7 +2,7 @@ FROM tomcat:8.5.35-jre10
 
 WORKDIR /var/lib/jenkins/workspace/dockerpro/webapp/target/
 
-ADD target/webapp.war /usr/local/tomcat/webapps/webapp.war
+ADD webapp.war /usr/local/tomcat/webapps/webapp.war
 
 EXPOSE 8080
 
